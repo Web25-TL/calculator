@@ -1,9 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const SpecialButton = () => {
+const SpecialButton = props => {
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <div>
+      <button
+        className="btn special-btn"
+        onClick={() => props.specialButtonClick(props.specialsMapped)}
+      >
+        {props.specialsMapped}
+      </button>
+    </div>
   );
 };
+
+export default SpecialButton;
